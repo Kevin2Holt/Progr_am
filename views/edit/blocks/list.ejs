@@ -1,0 +1,27 @@
+<div class="edit list" id="item_<%= j %>">
+	<input 	class="edit label"
+			placeholder="Label"
+			value="<%= item.label %>"/>
+	<% if(item.settings.list_type == "ordered") { %>
+		<ol class="edit list_ordered" id="item_list_<%= j %>">
+	<% } else if(item.settings.list_type == "unordered") { %>
+		<ul class="edit list_unordered" id="item_list_<%= j %>">
+	<% } else if(item.settings.list_type == "hidden") { %>
+		<ul class="edit list_none" id="item_list_<%= j %>">
+	<% } %>
+		<% for(k=0; k < item.content.length; k++) { %>
+			<li class="edit content"><input placeholder="Content"
+											data-list-item = "<%= k %>"
+											value="<%= item.content[k] %>"/></li>
+		<% } %>
+		<li class="edit content"><button 	class="edit new_listItem"
+											data-section-id="<%= section.id %>"
+											data-item="<%= j %>"
+											data-list-item="<%= item.content.length %>"
+											>+</button>
+	<% if(item.settings.list_type == "ordered") { %>
+		</ol>
+	<% } else { %>
+		</ul>
+	<% } %>
+</div>

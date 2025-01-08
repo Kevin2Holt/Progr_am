@@ -1,0 +1,87 @@
+{
+	"id": "exampleid",
+	"eventTitle": "Example Event",
+	"date": "2023-10-23",
+	"settings": {
+		"edit": "public"
+	},
+	"theme": {
+		"baseTheme": "dark",
+		"background-color": "444444",
+		"color": "ffffff"
+	},
+	"sections": [
+		{
+			"id": "section1id",
+			"label": "Section 1",
+			"settings": {
+				"edit": "public"
+			},
+			"items": [
+				{
+					"type": "title",
+					"content": "Example Title",
+					"settings": {
+						"temp": "temp"
+					}
+				},
+				{
+					"type": "info",
+					"label": "Info Label",
+					"content": "Info Content",
+					"settings": {
+						"temp": "temp"
+					}
+				},
+				{
+					"type": "list",
+					"label": "List Label",
+					"content": [
+						"List Item 1",
+						"List Item 2",
+						"List Item 3"
+					],
+					"settings": {
+						"list_type": "hidden"
+					}
+				}
+			]
+		},
+		{
+			"id": "section2id",
+			"label": "Section 2",
+			"settings": {
+				"edit": "public"
+			},
+			"items": [
+				{
+					"type": "title",
+					"content": "Example Title",
+					"settings": {
+						"temp": "temp"
+					}
+				},
+				{
+					"type": "info",
+					"label": "Much Longer Info Label",
+					"content": "Much Longer Info Content",
+					"settings": {
+						"temp": "temp"
+					}
+				},
+				{
+					"type": "list",
+					"label": "List Label",
+					"content": [
+						"List Item 1",
+						"List Item 2",
+						"List Item 3"
+					],
+					"settings": {
+						"list_type": "hidden"
+					}
+				}
+			]
+		}
+	]
+}

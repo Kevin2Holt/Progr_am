@@ -1,0 +1,36 @@
+<div id="topBar">
+
+	<div id="topBar_floatLeft" class="floatLeft">
+		<h1 id="topBar_title">Progr.am</h1>
+		<form id="topBar_search_form">
+			<button	id="topBar_search_button"
+					type="button"
+					onClick="topBar_search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+			<input 	id="topBar_search_input"
+					type="search"
+					placeholder="Event Code Search" />
+			<button	id="topBar_search_reset"
+					onClick="topBar_search_reset_click()">✖</button>
+		</form>
+	</div>
+
+	<div id="topBar_floatRight" class="floatRight">
+		<div id="topBar_signIn_container">
+			<p id="topBar_signIn" onClick="topBar_signIn_show()">Sign In</p>
+			<form id="topBar_signIn_form">
+				<div id="topBar_signIn_form_container">
+					<input	id="topBar_signIn_form_username"
+							type="username"
+							placeholder="Username" />
+					<input	id="topBar_signIn_form_password"
+							type="password"
+							placeholder="Password" />
+					<button id="topBar_signIn_form_submit"
+							type="button"
+							onClick="topBar_signIn_submit()">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</div>

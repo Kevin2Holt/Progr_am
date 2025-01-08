@@ -1,0 +1,22 @@
+<div class="list">
+	<p class="label"><%= item.label %></p>
+	<% if(item.settings.list_type == "ordered") { %>
+	<ol class="list_ordered">
+		<% for(k=0; k < item.content.length; k++) { %>
+			<li class="content"><%= item.content[k] %></li>
+		<% } %>
+	</ol>
+	<% } else if(item.settings.list_type == "unordered") { %>
+		<ul class="list_unordered">
+			<% for(k=0; k < item.content.length; k++) { %>
+				<li class="content"><%= item.content[k] %></li>
+			<% } %>
+		</ul>
+	<% } else if(item.settings.list_type == "hidden") { %>
+		<ul class="list_none">
+			<% for(k=0; k < item.content.length; k++) { %>
+				<li class="content"><%= item.content[k] %></li>
+			<% } %>
+		</ul>
+	<% } %>
+</div>

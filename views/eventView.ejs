@@ -1,0 +1,49 @@
+<%- include("./partials/head.ejs"); %>
+
+<% if(eventData.sections.length > 1) { %>
+	<div id="sections_tabGroup">
+		<div id="sections_tabGroup_inner">
+			<% for(i=0; i < eventData.sections.length; i++) { %>
+			<% if(i==0) { %>
+				<button class="section_tab section_tab_active"
+						id="section_tab_<%= eventData.sections[i].id %>"
+						data-sectionId="<%= eventData.sections[i].id %>"
+						onClick="switchSection('<%= eventData.sections[i].id %>')"
+						><%= eventData.sections[i].label %></button>
+			<% } else { %>
+				<button class="section_tab section_tab_inactive"
+						id="section_tab_<%= eventData.sections[i].id %>"
+						data-sectionId="<%= eventData.sections[i].id %>"
+						onClick="switchSection('<%= eventData.sections[i].id %>')"
+						><%= eventData.sections[i].label %></button>
+			<% } %>
+			<% } %>
+		</div>
+	</div>
+<% } %>
+<div id="section_outer">
+<% for(i=0; i < eventData.sections.length; i++) { %>
+	<% let section = eventData.sections[i]; %>
+
+	<% if(i == 0) { %>
+	<div class="section section_active" id="<%= section.id %>">
+	<% } else { %>
+	<div class="section section_inactive" id="<%= section.id %>">
+	<% } %>
+		<h1 class="section_label"><%= section.label %></h1>
+		<% for(j=0; j < section.items.length; j++) { %>
+			<% let item = section.items[j]; %>
+
+			<% if(item.type == "title") { %>
+				<%- include("./blocks/title.ejs", {item: item}); %>
+			<% } else if(item.type == "info") { %>
+				<%- include("./blocks/info.ejs", {item: item}); %>
+			<% } else if(item.type == "list") { %>
+				<%- include("./blocks/list.ejs", {item: item}); %>
+			<% } %>
+		<% } %>
+	</div>
+<% } %>
+</div>
+
+<%- include("./partials/foot.ejs"); %>

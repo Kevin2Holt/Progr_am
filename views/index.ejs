@@ -1,0 +1,25 @@
+<%- include("./partials/head.ejs"); %>
+
+<%- include("./partials/topBar.ejs"); %>
+
+
+<div id="main_container">
+	<div id="main_search">
+		<h1 id="main_search_label">progr.am/</h1>
+
+		<form id="main_search_container">
+			<button	id="main_search_button"
+					type="button"
+					onClick="main_search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+			<input 	id="main_search_input"
+					type="search"
+					placeholder="Event Code" />
+			<button	id="main_search_reset"
+					onClick="main_search_reset_click()">✖</button>
+		</form>
+	</div>
+
+	<h1 id="main_welcomeText">Simple & Easy Online Programs</h1>
+</div>
+
+<%- include("./partials/foot.ejs"); %>

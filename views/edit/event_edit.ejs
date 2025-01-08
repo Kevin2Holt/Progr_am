@@ -1,0 +1,83 @@
+<%- include("../partials/head.ejs"); %>
+
+<link rel="stylesheet" href="/styles_eventEdit.css">
+
+<script>
+	eventDataLoad(<%= eventData %>);
+</script>
+
+<% if(eventData.sections.length > 1) { %>
+	<div id="sections_tabGroup">
+		<div id="sections_tabGroup_inner">
+			<% for(i=0; i < eventData.sections.length; i++) { %>
+			<% if(i==0) { %>
+				<button class="edit section_tab section_tab_active"
+						id="section_tab_<%= eventData.sections[i].id %>"
+						data-sectionId="<%= eventData.sections[i].id %>"
+						onClick="switchSection('<%= eventData.sections[i].id %>')"
+						><%= eventData.sections[i].label %></button>
+			<% } else { %>
+				<button class="edit section_tab section_tab_inactive"
+						id="section_tab_<%= eventData.sections[i].id %>"
+						data-sectionId="<%= eventData.sections[i].id %>"
+						onClick="switchSection('<%= eventData.sections[i].id %>')"
+						><%= eventData.sections[i].label %></button>
+			<% } %>
+			<% } %>
+			<button class="edit newSectionButton section_tab section_tab_inactive"
+					id="section_tab_new"
+					onClick="createNewSection()"
+					>+</button>
+		</div>
+	</div>
+<% } %>
+<div id="section_outer">
+<% for(i=0; i < eventData.sections.length; i++) { %>
+	<% let section = eventData.sections[i]; %>
+
+	<% if(i == 0) { %>
+		<div class="edit section section_active" id="<%= section.id %>">
+	<% } else { %>
+		<div class="edit section section_inactive" id="<%= section.id %>">
+	<% } %>
+	<div class="edit section_label_outer">
+		<input class="edit section_label"
+				value="<%= section.label %>"
+				placeholder="Section Label" />
+	</div>
+	<button class="edit addItem"
+			data-section_id="<%= section.id %>"
+			data-item="-1"
+			>+</button>
+	<% for(j=0; j < section.items.length; j++) { %>
+		<% let item = section.items[j]; %>
+
+
+		<% if(item.type == "title") { %>
+			<%- include("./blocks/title.ejs", {item: item, section: section}); %>
+		<% } else if(item.type == "info") { %>
+			<%- include("./blocks/info.ejs", {item: item, section: section}); %>
+		<% } else if(item.type == "list") { %>
+			<%- include("./blocks/list.ejs", {item: item, section: section}); %>
+		<% } %>
+
+
+		<button class="edit addItem"
+				id="addItem_<%= j %>"
+				data-section_id="<%= section.id %>"
+				data-item="<%= j %>"
+				>+</button>
+
+	<% } %>
+	</div>
+<% } %>
+</div>
+
+
+<div class="edit toolbar">
+	<button id="saveButton"
+			onClick="saveEvent()"
+			>Save</button>
+</div>
+
+<%- include("../partials/foot.ejs"); %>
