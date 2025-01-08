@@ -1,0 +1,295 @@
+{
+	"title": "Lafayette YSA",
+	"groups": [
+		{
+			"title": "Sacrament Meeting",
+			"settings": {
+				"border": false
+			},
+			"sections": [
+				{
+					"title": "People",
+					"showTitle": false,
+					"settings": {
+						"border": false
+					},
+					"content": [
+						[
+							"INFO",
+							{
+								"label": "Presiding",
+								"content": "Bishop Patterson",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"INFO",
+							{
+								"label": "Conducting",
+								"content": "Bro. Caleb Harper",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"INFO",
+							{
+								"label": "Pianist",
+								"content": "Bro. Kevin Holt",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						]
+					]
+				},
+				{
+					"title": "Opening",
+					"showTitle": false,
+					"settings": {
+						"border": false
+					},
+					"content": [
+						[
+							"EVENT",
+							{
+								"label": "Welcome",
+								"content": null,
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"INFO",
+							{
+								"label": "Opening Hymn",
+								"content": "301",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"INFO",
+							{
+								"label": "Opening Prayer",
+								"content": "Bro. Jeffrey Holt",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"EVENT",
+							{
+								"label": "Ward/Stake Business",
+								"content": null,
+								"padding": 15,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"INFO",
+							{
+								"label": "Sacrament Hymn",
+								"content": "193",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"EVENT",
+							{
+								"label": "Administration of the Sacrament",
+								"content": null,
+								"padding": 15,
+								"settings": {
+									"border": false
+								}
+							}
+						]
+					]
+				},
+				{
+					"title": "Closing",
+					"showTitle": false,
+					"settings": {
+						"border": false
+					},
+					"content": [
+						[
+							"INFO",
+							{
+								"label": "Speaker",
+								"content": "Elder Ball",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"INFO",
+							{
+								"label": "Intermediate Hymn",
+								"content": "66",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"INFO",
+							{
+								"label": "Speaker",
+								"content": "Sis. Rebekah DeGraw",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"SPACE",
+							25
+						],
+						[
+							"INFO",
+							{
+								"label": "Closing Hymn",
+								"content": "129",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"INFO",
+							{
+								"label": "Closing Prayer",
+								"content": "Sis. Elizabeth DeGraw",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"title": "Announcements",
+			"sections": [
+				{
+					"title": "Weekly",
+					"showTitle": true,
+					"settings": {
+						"border": false
+					},
+					"content": [
+						[
+							"INFO",
+							{
+								"label": "Monday, 7:00pm",
+								"content": "Game Night",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"LIST",
+							{
+								"label": "Institute",
+								"content": [
+									"Tuesday, 6:00pm - Come, Follow Me",
+									"Dinner in between",
+									"Tuesday, 8:00pm - Something Else",
+									"Friday, 11:30am - Gospel Questions"
+								],
+								"padding": 5,
+								"settings": {
+									"bullets": "none",
+									"ordered": false,
+									"between-padding": 5,
+									"border": true
+								}
+							}
+						],
+						[
+							"INFO",
+							{
+								"label": "Thursday, 6:30pm",
+								"content": "Meal Night",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"INFO",
+							{
+								"label": "Friday, 7:00pm",
+								"content": "Sports Night",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						]
+					]
+				},
+				{
+					"title": "Other",
+					"showTitle": true,
+					"settings": {
+						"border": false
+					},
+					"content": [
+						[
+							"INFO",
+							{
+								"label": "YSA Temple Day",
+								"content": "Every 2nd Saturday",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						],
+						[
+							"TEXT",
+							{
+								"label": null,
+								"content": "If you need to set up an appointment with the bishopric, please text Kevin Holt at (765) 476-9467",
+								"padding": 5,
+								"settings": {
+									"border": false
+								}
+							}
+						]
+					]
+				}
+			]
+		}
+	]
+}
